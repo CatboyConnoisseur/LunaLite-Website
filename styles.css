@@ -1,0 +1,351 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('luna.png') center/cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 60px rgba(138, 43, 226, 0.3);
+    }
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #8a2be2, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #b8b8b8;
+    margin-bottom: 20px;
+}
+
+/* Main content */
+.main-content {
+    padding: 60px 0;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #8a2be2;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+/* Video container */
+.video-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.lunalite-video {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lunalite-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
+}
+
+/* Config container */
+.config-container {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.config-container h3 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #8a2be2;
+}
+
+.config-textbox {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(138, 43, 226, 0.5);
+    border-radius: 15px;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+    overflow: hidden;
+}
+
+.config-header {
+    background: rgba(138, 43, 226, 0.1);
+    padding: 20px;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #8a2be2;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(138, 43, 226, 0.8);
+    color: white;
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background: rgba(138, 43, 226, 1);
+    border-color: rgba(138, 43, 226, 0.8);
+    transform: translateY(-1px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.download-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.config-content {
+    color: #00ffff;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    border: none;
+}
+
+/* Custom scrollbar for config textbox */
+.config-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.config-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.config-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #8a2be2, #00ffff);
+    border-radius: 4px;
+}
+
+.config-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #9d4edd, #00e6e6);
+}
+
+/* CTA section */
+.cta {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8a2be2;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #8a2be2, #00ffff);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+}
+
+.github-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.6);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(138, 43, 226, 0.3);
+    color: #888888;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .description h2,
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .lunalite-video {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .config-textbox {
+        max-width: 95%;
+    }
+    
+    .config-header {
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .config-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .config-content {
+        font-size: 0.8rem;
+        max-height: 300px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .main-content {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .feature {
+        padding: 20px;
+    }
+}
