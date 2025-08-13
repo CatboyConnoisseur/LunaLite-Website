@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LunaLite - CS2 Config</title>
+    <title>LunaLite</title>
+    <link rel="icon" type="image/x-icon" href="luna.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,11 +39,14 @@
                                 Download
                             </a>
                         </div>
-                        <pre class="config-content">snd_mute_mvp_music_live_players 0
+                        <pre class="config-content">// Put this file in SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg
+// to use in game, type "exec LunaLite.cfg" in console
+
+snd_mute_mvp_music_live_players 0
 snd_toolvolume .2
 cl_crosshairusealpha 1
 echo "Welcome to LunaLite"
-say "This user is using LunaLite, an improved CS2 experience."
+say "This user is using LunaLite, an improved CS2 experience. LunaLite.cc"
 
 // All aliases for every key
 alias +moveforward "+forward; play sounds\weapons\weapon_zoom_out_03.vsnd"
@@ -174,35 +178,12 @@ alias +shopping "buymenu; play \sounds\ui\beep22.vsnd_c; trashtalker"
 alias -shopping " "
 bind b +shopping
 
-//alias +test "toggle viewmodel_offset_y -2 -1 0 1 2.5"
-//alias -test ""
-//bind kp_5 +test
-
-//alias + "+; "
-//alias - "-; "
-//bind 
-
 bind space "say im malding that you just killed me"
 bind scancode15 "say perhaps the worst halve i have ever plaied ."
 bind scancode18 "play \sounds\music\amontobin_01\bombplanted.vsnd_c; say can i have a cigarette"
 bind scancode19 "play \sounds\music\amontobin_01\deathcam.vsnd_c; say paws at you"
 bind y "say I'm trying to chat but my master has zipped my mouth shut"
-bind u "say now im trying to talk to my team but im still mute"
-
-//\sounds\music\amontobin_01\bombplanted.vsnd_c
-//fill screen with various crosshair colors
-//change buy button to open buy menu and also talk shit to the team
-//\sounds\common\pink_noise_mono_loop.vsnd_c pure static
-//\sounds\common\talk.vsnd_c chat sound
-//\sounds\ui\beep22.vsnd_c annoying danger zone sound
-//\sounds\ui\guardian_outofbounds.vsnd_c oomph
-//\sounds\ui\mm_success_lets_roll.vsnd_c lets roll
-//\sounds\ui\ps3_menu.vsnd_c drums
-// play \sounds\training\firewerks_burst_02.vsnd_c cannon
-//good ui sounds
-//\sounds\ui\beepclear.vsnd_c
-//\sounds\ui\beep07.vsnd_c
-//\sounds\ui\buttonclick.vsnd_c</pre>
+bind u "say now im trying to talk to my team but im still mute"</pre>
                     </div>
                 </div>
             </section>
